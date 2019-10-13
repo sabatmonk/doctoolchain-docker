@@ -12,6 +12,11 @@ RUN	echo "add needed tools" && \
     gem install rdoc --no-document && \
     gem install pygments.rb
 
+# Add pandoc
+RUN apk add --no-cache cmark --repository http://nl.alpinelinux.org/alpine/edge/testing && \
+    apk add --no-cache --allow-untrusted pandoc --repository https://conoria.gitlab.io/alpine-pandoc/
+
+
 RUN git clone --recursive https://github.com/docToolchain/docToolchain.git docToolchain && \
     cd docToolchain && \
     rm -rf .git && \
