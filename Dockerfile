@@ -34,4 +34,4 @@ WORKDIR /project
 
 VOLUME /project
 
-ENTRYPOINT /bin/bash
+ENTRYPOINT ["/docToolchain/bin/doctoolchain"]
