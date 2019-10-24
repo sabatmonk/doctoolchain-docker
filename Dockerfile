@@ -1,7 +1,6 @@
 FROM openjdk:8u191-jdk-alpine
 
-RUN	echo "add needed tools" && \
-    apk add --no-cache curl wget zip unzip git bash \
+RUN	apk add --no-cache curl wget zip unzip git bash \
     git \
     graphviz \
     python \
