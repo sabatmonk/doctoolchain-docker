@@ -1,5 +1,8 @@
 FROM openjdk:8u191-jdk-alpine
 
+MAINTAINER sabatmonk
+LABEL version=1.1
+
 RUN	apk add --no-cache curl wget zip unzip git bash \
     git \
     graphviz \
