@@ -1,7 +1,7 @@
 FROM openjdk:8u191-jdk-alpine
 
 MAINTAINER sabatmonk
-LABEL version=1.1
+LABEL version=1.2
 
 RUN	apk add --no-cache curl wget zip unzip git bash \
     git \
@@ -14,7 +14,7 @@ RUN	apk add --no-cache curl wget zip unzip git bash \
     gem install rdoc --no-document && \
     gem install pygments.rb
 
-RUN git clone --recursive https://github.com/docToolchain/docToolchain.git docToolchain && \
+RUN git clone --recursive https://github.com/sabatmonk/docToolchain.git docToolchain && \
     cd docToolchain && \
     rm -rf .git && \
     rm -rf resources/asciidoctor-reveal.js/.git && \
