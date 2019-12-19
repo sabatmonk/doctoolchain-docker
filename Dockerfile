@@ -10,11 +10,12 @@ RUN	apk add --no-cache curl wget zip unzip git bash \
     ruby \
     py-pygments \
     libc6-compat \
+    ssh \
     ttf-dejavu && \
     gem install rdoc --no-document && \
     gem install pygments.rb
 
-RUN git clone --recursive https://github.com/sabatmonk/docToolchain.git docToolchain && \
+RUN git clone --recursive https://github.com/docToolchain/docToolchain.git docToolchain && \
     cd docToolchain && \
     rm -rf .git && \
     rm -rf resources/asciidoctor-reveal.js/.git && \
