@@ -3,6 +3,8 @@ FROM openjdk:8u191-jdk-alpine
 MAINTAINER sabatmonk
 LABEL version=1.2
 
+RUN apk update
+
 RUN	apk add --no-cache curl wget zip unzip git bash \
     git \
     graphviz \
@@ -10,7 +12,7 @@ RUN	apk add --no-cache curl wget zip unzip git bash \
     ruby \
     py-pygments \
     libc6-compat \
-    ssh \
+    openssh \
     ttf-dejavu && \
     gem install rdoc --no-document && \
     gem install pygments.rb
