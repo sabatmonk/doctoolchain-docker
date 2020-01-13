@@ -17,7 +17,7 @@ RUN	apk add --no-cache curl wget zip unzip git bash \
     gem install rdoc --no-document && \
     gem install pygments.rb
 
-RUN git clone --recursive https://github.com/docToolchain/docToolchain.git docToolchain && \
+RUN git clone --recursive -b v2.x --single-branch https://github.com/sabatmonk/docToolchain.git docToolchain && \
     cd docToolchain && \
     rm -rf .git && \
     rm -rf resources/asciidoctor-reveal.js/.git && \
